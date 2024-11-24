@@ -1,8 +1,14 @@
+import { IconeAjustes, IconeCasa, IconeSino } from "../icons"
+import MenuItem from "./MenuItem"
 
-export default function MenuLateral(props){
+export default function MenuLateral(){
     return(
         <aside>
-              <h1>Menu</h1>
+              <ul>
+                <MenuItem url="/" texto="Inicio" icone={IconeCasa} />
+                <MenuItem url="/ajustes" texto="Ajustes" icone={IconeAjustes} />
+                <MenuItem url="/novidades" texto="Novidades" icone={IconeSino} />
+              </ul>
         </aside>
     )
 }
