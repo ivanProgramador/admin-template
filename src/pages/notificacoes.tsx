@@ -4,7 +4,7 @@ export default function Notificacoes() {
   return (
     <div>
         <Layout titulo="Notificações"
-          subtitulo="Aqui você pod egerenciar as sua notificações" >
+          subtitulo="Aqui você pode gerenciar as sua notificações" >
            <h3>Conteudo</h3>
         </Layout>
     </div>
