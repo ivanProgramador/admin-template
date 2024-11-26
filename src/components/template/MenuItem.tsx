@@ -42,8 +42,9 @@ export default function MenuItem(props:MenuItemProps){
 
            {props.url? (
              <Link legacyBehavior href={props.url}>
+                
              {renderizarLink()}       
-          </Link>
+             </Link>
            ):(
             renderizarLink()
            )}
