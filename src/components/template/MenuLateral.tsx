@@ -4,7 +4,10 @@ import MenuItem from "./MenuItem"
 
 export default function MenuLateral(){
     return(
-        <aside className="flex flex-col">
+        <aside className={`
+           flex flex-col
+           dark:bg-gray-900 dark:text-gray-200
+        `}>
 
 
 
