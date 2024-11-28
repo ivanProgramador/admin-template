@@ -13,7 +13,7 @@ interface AuthInputProps{
 
 export default function AuthInput(props:AuthInputProps){
     return(
-        <div className="flex flex-col" >
+        <div className="flex flex-col mt-2" >
 
             <label>{props.label}</label>
             <input 
@@ -21,6 +21,12 @@ export default function AuthInput(props:AuthInputProps){
               value={props.valor}
               onChange={e=> props.valorMudou?.(e.target.value)}
               required={props.obrigatorio}
+              className={`
+                 px-4 py-3 rounded-lg bg-gray-200 mt-2
+                border focus: border-blue-500
+                focus: outline-none
+                focus:bg-white
+               `}
             />
         </div>
     )
