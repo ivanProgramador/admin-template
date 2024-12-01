@@ -26,8 +26,16 @@ export default function autenticacao(){
     return(
 
       <div className="flex flex-col h-screen items-center justify-center" >
+
+        <div className="hidden md:block md:w-1/2" >
+          <img
+              src="C:\temp\admin-template\public\imagem.jpg" 
+              alt="Imagem da tela de autanticação"
+              className="h-screen w-full object-cover"
+           />
+        </div>
     
-        <div className="w-1/2"  > 
+        <div className="md-10 w-full  md:w-1/2"  > 
            
            <h1 className={`
              text-xl font-bold mb-5 
