@@ -40,7 +40,7 @@ export default function autenticacao(){
            <h1 className={`
              text-xl font-bold mb-5 
             `} >
-              {modo === 'login' ? 'Entre com sua conta':'Cdastre-se na plataforma'}
+              {modo === 'login' ? 'Entre com sua conta':'Cadastre-se na plataforma'}
             </h1>
 
 
@@ -81,6 +81,30 @@ export default function autenticacao(){
               
                
              </button>
+
+             {modo =='login' ? (
+                <p className="mt-8">
+                   Novo por aqui ?
+                   <a onClick={()=>setModo('cadastro')} className={`
+                      text-blue-500 hover:text-blue-700 font-semibold
+                      cursor-pointer
+                    `} >Crie uma conta gratuitamente</a>
+
+                </p>
+                
+
+             ):(
+
+              <p className="mt-8">
+                   Já faz parte da nossa comunidade ?
+                   <a onClick={()=>setModo('cadastro')} className={`
+                      text-blue-500 hover:text-blue-700 font-semibold
+                      cursor-pointer
+                    `} >
+                      Entre com as suas credenciais
+                    </a>
+                </p>
+              )}
 
 
         </div>
