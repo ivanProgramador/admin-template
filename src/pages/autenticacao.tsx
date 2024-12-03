@@ -1,5 +1,6 @@
 import AuthInput from "@/components/auth/AuthInput";
 import { useState } from "react";
+import { IconeAtencao } from "@/components/icons";
 
 
 export default function autenticacao(){
@@ -29,7 +30,7 @@ export default function autenticacao(){
 
         <div className="hidden md:block md:w-1/2" >
           <img
-              src="C:\temp\admin-template\public\imagem.jpg" 
+              src="https://api.unsplash.com/photos/random?count=5" 
               alt="Imagem da tela de autanticação"
               className="h-screen w-full object-cover"
            />
@@ -42,6 +43,18 @@ export default function autenticacao(){
             `} >
               {modo === 'login' ? 'Entre com sua conta':'Cadastre-se na plataforma'}
             </h1>
+
+            <div className={`
+              flex items-center
+              bg-red-400 text-white
+              border border-red-700 rounded-lg 
+            `}>
+
+              {IconeAtencao(7)}
+
+              
+              <span className="ml-3">Ocorreu um erro</span>
+            </div>
 
 
            <AuthInput 
