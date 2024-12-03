@@ -5,17 +5,28 @@ import { IconeAtencao } from "@/components/icons";
 
 export default function autenticacao(){
 
+    const[erro,setErro] = useState(null);
     const[modo,setModo] = useState<'login'|'cadastro'>('login');
     const[email,setEmail] = useState('')
     const[senha,setSenha] = useState('')
+
+    function exibirErro(msg:any, tempoEmSegundos = 5){
+
+       setErro(msg)
+
+       setTimeout(()=>setErro(null), tempoEmSegundos * 1000);
+
+    }
 
 
     function submeter(){
 
       if(modo==='login'){
         console.log('login')
+        exibirErro('Houve um erro no login')
       }else{
         console.log('Cadastrar')
+        exibirErro('Houve um erro no cadastro')
       }
         
        
@@ -28,13 +39,6 @@ export default function autenticacao(){
 
       <div className="flex flex-col h-screen items-center justify-center" >
 
-        <div className="hidden md:block md:w-1/2" >
-          <img
-              src="https://api.unsplash.com/photos/random?count=5" 
-              alt="Imagem da tela de autanticação"
-              className="h-screen w-full object-cover"
-           />
-        </div>
     
         <div className="md-10 w-full  md:w-1/2"  > 
            
@@ -44,17 +48,23 @@ export default function autenticacao(){
               {modo === 'login' ? 'Entre com sua conta':'Cadastre-se na plataforma'}
             </h1>
 
-            <div className={`
-              flex items-center
-              bg-red-400 text-white
-              border border-red-700 rounded-lg 
-            `}>
+            {erro ? (
 
-              {IconeAtencao(7)}
+              <div className={`
+                flex items-center
+                bg-red-400 text-white
+                border border-red-700 rounded-lg 
+              `}>
+  
+                {IconeAtencao(7)}
+  
+                
+                 <span className="ml-3">{erro}</span>
+              </div>
 
-              
-              <span className="ml-3">Ocorreu um erro</span>
-            </div>
+            ):false}
+
+            
 
 
            <AuthInput 
