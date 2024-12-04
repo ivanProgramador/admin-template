@@ -94,6 +94,6 @@ export default function App({ Component, pageProps }: AppProps) {
 
 
 
-
-
+--------------------------------------------------------------------------------------------
+firebase para nesse projeto eu instalei a aversão 8 para ser compativel com o curso
 */
